@@ -14,7 +14,7 @@ export default {
     return {
       todos: [
         {id: 1, title: 'buy a loaf of bread', completed: false},
-        {id: 1, title: 'buy a loaf of bread', completed: false},
+        {id: 2, title: 'buy a loaf of bread', completed: false},
         {id: 1, title: 'buy a loaf of bread', completed: false}
       ]
     }
