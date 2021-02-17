@@ -2,14 +2,25 @@
   <div id="app">
     <h1>todo application</h1>
     <hr>
+    <todoList />
   </div>
 </template>
 
 <script>
+import todoList from '@/components/todoList'
 export default {
   name: 'App',
+  data() {
+    return {
+      todos: [
+        {id: 1, title: 'buy a loaf of bread', completed: false},
+        {id: 1, title: 'buy a loaf of bread', completed: false},
+        {id: 1, title: 'buy a loaf of bread', completed: false}
+      ]
+    }
+  },
   components: {
-    
+    todoList
   }
 }
 </script>
