@@ -2,7 +2,9 @@
   <div id="app">
     <h1>todo application</h1>
     <hr>
-    <todoList />
+    <todoList
+    v-bind:todos="todos"
+     />
   </div>
 </template>
 
@@ -14,8 +16,8 @@ export default {
     return {
       todos: [
         {id: 1, title: 'buy a loaf of bread', completed: false},
-        {id: 2, title: 'buy a loaf of bread', completed: false},
-        {id: 1, title: 'buy a loaf of bread', completed: false}
+        {id: 2, title: 'buy a book', completed: false},
+        {id: 3, title: 'buy a butter', completed: false}
       ]
     }
   },
