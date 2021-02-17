@@ -5,7 +5,7 @@
             <strong>{{todo.id}}</strong>
             {{todo.title}}
         </span>
-        <button>&times;</button>
+        <button class="rm">&times;</button>
     </li>
 </template>
 
@@ -28,4 +28,18 @@ export default {
         padding: .5rem 2rem;
         margin-bottom: 1rem;
     }
+    .rm {
+        background: red;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: bold;
+        outline: none;
+    }
+    input {
+        margin-right: 1rem;
+    }
+    .done {
+        text-decoration: line-through;
+    }
+
 </style>
