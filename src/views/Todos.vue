@@ -1,9 +1,16 @@
 <template>
-  <div id="app">
-    <!-- <h1>Todo list</h1>
-    <hr> -->
-
-    <router-view />
+  <div>
+    <h2>Todo list</h2>
+    <router-link to="/">Home</router-link>
+    <hr>
+    <addTodo 
+        @add-todo="addTodo"
+     />
+    <hr>
+    <todoList
+        v-bind:todos="todos"
+        @remove-todo="removeTodo"
+     />
   </div>
 </template>
 
@@ -14,11 +21,7 @@ export default {
   name: 'App',
   data() {
     return {
-      todos: [
-        // {id: 1, title: 'Buy a loaf of bread', completed: false},
-        // {id: 2, title: 'Buy a book', completed: false},
-        // {id: 3, title: 'Buy a butter', completed: false}
-      ]
+      todos: []
     }
   },
   mounted() {
@@ -41,14 +44,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
