@@ -3,7 +3,7 @@
         <span v-bind:class="{done: todo.completed}">
             <input type="checkbox" 
                    v-on:change="todo.completed = !todo.completed">
-            <strong>{{todo.id}}</strong>
+            <strong>{{(index + 1) + '.'}}</strong>
             {{todo.title}}
         </span>
         <button class="rm" 
@@ -17,12 +17,18 @@ export default {
         todo: {
             type: Object,
             required: true
-        }
+        },
+        index: Number
     }
 }
 </script>
 
 <style scoped>
+    span{
+        display: flex;
+        text-align: start;
+        align-items: center;
+    }
     li {
         border: 1px solid #ccc;
         border-radius: 10px;
@@ -39,9 +45,19 @@ export default {
         font-weight: bold;
         outline: none;
         border: none;
+        cursor: pointer;
+        height: 100%;
+        align-self: center;
+        
     }
     input {
         margin-right: 1rem;
+        cursor: pointer;
+    }
+    strong{
+        margin-right: 10px;
+        align-self: center;
+        font-size: 18px;
     }
     .done {
         text-decoration: line-through;

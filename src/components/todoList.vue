@@ -2,8 +2,9 @@
     <div>
         <ul>
             <todoItem
-            v-for="todo in todos"
+            v-for="(todo, i) in todos"
             v-bind:todo="todo"
+            v-bind:index="i"
             :key="todo"
             v-on:remove-todo="removeTodo"
             />
@@ -31,5 +32,8 @@ export default {
         list-style: none;
         margin: 0 auto;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 </style>
