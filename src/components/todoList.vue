@@ -5,6 +5,7 @@
             v-for="todo in todos"
             v-bind:todo="todo"
             :key="todo"
+            v-on:remove-todo="removeTodo"
             />
         </ul>
     </div>
@@ -16,6 +17,11 @@ export default {
     props: ['todos'],
     components: {
         todoItem
+    },
+    methods: {
+        removeTodo(id) {
+            this.$emit('remove-todo', id)
+        }
     }
 }
 </script>
@@ -23,7 +29,7 @@ export default {
 <style scoped>
     ul {
         list-style: none;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
     }
 </style>
