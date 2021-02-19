@@ -33,8 +33,10 @@ export default {
     fetch('https://jsonplaceholder.typicode.com/todos?_limit=3')
       .then(response => response.json())
       .then(json => {
-        this.todos = json
-        this.loading = false
+        setTimeout(() => {
+            this.todos = json
+            this.loading = false
+        }, 1000)
       })
   },
   methods: {
