@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="onSubmit">
         <input type="text" v-model="title">
-        <button type="submit">Create</button>
+        <button type="submit">create</button>
     </form>
 </template>
 
@@ -30,15 +30,16 @@ export default {
 
 <style scoped>
     form{
-        width: 250px;
+        width: 300px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     input{
         border-radius: 5px;
         border: 1px solid #333;
         outline: none;
+        height: 25px;
     }
     button{
         color: #fff;
@@ -47,6 +48,9 @@ export default {
         background: rgb(59, 25, 209);
         outline: none;
         cursor: pointer;
+        width: 70px;
+        font-size: 15px;
+        font-weight: bold;
     }
     button:hover{
         color: rgb(43, 61, 226);
