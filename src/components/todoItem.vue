@@ -39,9 +39,11 @@ export default {
         font-weight: bold;
         outline: none;
         border: none;
+        cursor: pointer;
     }
     input {
         margin-right: 1rem;
+        cursor: pointer;
     }
     .done {
         text-decoration: line-through;
