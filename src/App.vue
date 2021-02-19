@@ -20,9 +20,9 @@ export default {
   data() {
     return {
       todos: [
-        {id: 1, title: 'Buy a loaf of bread', completed: false},
-        {id: 2, title: 'Buy a book', completed: false},
-        {id: 3, title: 'Buy a butter', completed: false}
+        // {id: 1, title: 'Buy a loaf of bread', completed: false},
+        // {id: 2, title: 'Buy a book', completed: false},
+        // {id: 3, title: 'Buy a butter', completed: false}
       ]
     }
   },
